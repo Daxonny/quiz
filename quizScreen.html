@@ -5,6 +5,7 @@
 	<title>Quiz</title>
 
 	<link rel="stylesheet" href="css/loader.css">
+	<link rel="stylesheet" type="text/css" href="css/quizScreen.css">
 </head>
 <body>
 
@@ -12,16 +13,49 @@
 		<header>
 			<form>
 				<label for="langs">Language</label>
-				<select id="langs">
+				<select>
 					 <option value="EN">EN</option>
 					 <option value="MK">MK</option>
 				</select>
 			</form>
 		</header>
 		<main>
-			
+			<section id="question1">
+				<h2>Question 1:</h2>
+				<div class="question">
+					<form>
+						<label>I am:</label>
+						<select id="langs">
+							 <option disabled selected value> -- select an option -- </option>
+							 <option value="student">Student</option>
+							 <option value="employed">Employed</option>
+							 <option value="other">Other</option>
+						</select><br>
+						<a href="#question2">Next</a>
+					</form>
+					<progress max="100" value="10"> 10% </progress>
+					<div class="loader"></div>
+				</div>
+			</section>
+			<section id="question2">
+				<h2>Question 2:</h2>
+				<div class="question">
+					<form>
+						<label id="hobby">I can:</label><br>
+						<input type="checkbox" name="hobby" value="Swim">
+						<label>Swim</label><br>
+						<input type="checkbox" name="hobby" value="Run">
+						<label>Run</label><br>
+						<input type="checkbox" name="hobby" value="Cook">
+						<label>Cook</label><br>
+						<a href="#">Next</a>
+					</form>
+					<progress max="100" value="20"> 20% </progress>
+					<div class="loader"></div>
+				</div>
+			</section>
 		</main>
+		<footer><div>All rights reserved</div></footer>
 	</div>
-
 </body>
 </html>
